@@ -1,0 +1,5 @@
+*{ margin: 0; padding: 0}
+body{ background: #248afd; font-family: 'Nunito'}
+
+.error-page{ padding: 70px 35px}
+.error-code{ font-size: 12rem}

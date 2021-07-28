@@ -17,8 +17,6 @@ return [
     'bulk_news_entry' => 'বাল্ক নিউস',
     'news_list' => 'সংবাদ তালিকা',
     
-
-    //Breaking News
     'breaking_news' => 'সদ্যপ্রাপ্ত সংবাদ',
     'page_manager' => 'পেজ ব্যবস্থাপনা',
     'photo_manager' => 'ছবি ব্যবস্থাপনা',
@@ -46,10 +44,8 @@ return [
     'reporter_list'=>' প্রতিবেদক',
     'bangladeshi_district'=>'বাংলাদেশী জেলা',
     'bangladeshi_thana'=>'বাংলাদেশী থানা',
-
-     
-
     //Common Name
     'url' => 'ইউআর',
+
 
 ];

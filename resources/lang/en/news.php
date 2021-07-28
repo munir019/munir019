@@ -44,7 +44,5 @@ return [
     'bangladeshi_district'=>'Bangladeshi District',
     'bangladeshi_thana'=>'Bangladeshi Thana',
     'url' => 'Url',
-
-
-
+   
 ];

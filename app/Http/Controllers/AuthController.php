@@ -8,6 +8,8 @@ use App\Orangebd\Network;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 
+
+
 class AuthController extends Controller
 {
     use Network;
@@ -64,6 +66,6 @@ class AuthController extends Controller
             $request->session()->invalidate();
         }
         session()->flash('user');
-        return redirect(config('app.url').'login');
+        return redirect(config('app.url').'/login');
     }
 }

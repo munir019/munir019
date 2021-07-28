@@ -3,3 +3,8 @@
     max-width: 100%;
 }
 }
+@media (min-width: 1200px){
+    .content-wrapper {
+        max-width: 100%;
+    }
+}

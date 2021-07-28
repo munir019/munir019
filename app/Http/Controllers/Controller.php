@@ -16,7 +16,7 @@ class Controller extends BaseController
     public function __construct()
     {
         $version = '1.0.1'.time();
-        
+       
         App::setLocale('en');
 
         $siteTitle = 'Orange News Panel';

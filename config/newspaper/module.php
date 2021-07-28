@@ -12,7 +12,7 @@ return array(
 		'news_manager' => array(
 			'display_name' => 'News Manager',
 			'title' => 'News Manager',
-			'url'   =>'news',
+			'url'   =>'news-manager',
             'icon' => 'icon-columns menu-icon',
             'active' =>'true',
 			'child' => array(
@@ -22,11 +22,10 @@ return array(
                     'title' => 'Date Setup',
                     'url'   =>'date',
                     'icon' => 'fa-home',
-                    'active' =>'false',
+                    'active' =>'true',
                 ),
         
                 'news_category' => array(
-        
                     'display_name' => 'News Category',
                     'title' => 'News Category ',
                     'url'   =>'news-category',
@@ -35,7 +34,6 @@ return array(
                 ),
         
                 'news_list' => array(
-        
                     'display_name' => 'News List',
                     'title' => 'News List',
                     'url'   =>'news-list',
@@ -45,7 +43,6 @@ return array(
                 ),
         
                 'breaking_news' => array(
-        
                     'display_name' => 'Breaking News',
                     'title' => 'Breaking News',
                     'url'   =>'breakingnews',
@@ -82,7 +79,7 @@ return array(
         'page_manager' => array(
 			'display_name' => 'Page Manager',
 			'title' => 'Page Manager',
-			'url'   =>'#',
+			'url'   =>'page-manager',
             'icon' => 'icon-grid menu-icon',
             'active' =>'true',
 			'child' => ''
@@ -90,7 +87,7 @@ return array(
         'photo_manager' => array(
 			'display_name' => 'Photo Manager',
 			'title' => 'Photo Manager',
-			'url'   =>'#',
+			'url'   =>'photo-manager',
             'icon' => 'icon-layout menu-icon',
 			'active' =>'true',
             'child' => array(
@@ -100,29 +97,31 @@ return array(
                     'title' => 'Photo Category',
                     'url'   =>'photo-category',
                     'icon' => '',
+                    'active' =>'true',
                 ),
                 'photo_album' => array(
                     'display_name' => 'Photo Album',
                     'title' => 'Photo Album ',
                     'url'   =>'photo-album',
                     'icon' => 'fa-home',
+                    'active' =>'true',
                 ),
             ) // Child End
         ),
         'video_manager' => array(
             'display_name' => 'Video Manager',
             'title' => 'Video Manager',
-            'url'   =>'#',
+            'url'   =>'video-manager',
             'icon' => 'icon-grid menu-icon',
             'active' =>'true',
             'child' => array(
 
                 'video_category' => array(
-        
                     'display_name' => 'Video Category',
                     'title' => 'Video Category',
                     'url'   =>'video-category',
                     'icon' => '',
+                    'active' =>'true',
                 ),
         
                 'video_list' => array(
@@ -131,6 +130,7 @@ return array(
                     'title' => 'Video List ',
                     'url'   =>'video-list',
                     'icon' => '',
+                    'active' =>'true',
                 ),
         
                 
@@ -139,7 +139,7 @@ return array(
         'notice_manager' => array(
 			'display_name' => 'Notice Manager',
 			'title' => 'Notice Manager',
-			'url'   =>'noticemanager',
+			'url'   =>'notice-manager',
 			'icon' => 'icon-bar-graph menu-icon',
             'active' =>'true',
 			'child' => ''
@@ -147,7 +147,7 @@ return array(
         'user_manager' => array(
 			'display_name' => 'User Manager',
 			'title' => 'User Manager',
-			'url'   =>'noticemanager',
+			'url'   =>'user-manager',
 			'icon' => 'icon-head menu-icon',
             'active' =>'true',
 			'child' => array(
@@ -170,12 +170,12 @@ return array(
                 ),
         
                 
-            ) 
+            ) // Child End
 		),
         'engine_setting' => array(
 			'display_name' => 'Engine Setting',
 			'title' => 'Engine Setting',
-			'url'   =>'enginesetting',
+			'url'   =>'engine-setting',
 			'icon' => 'icon-cog menu-icon',
             'active' =>'true',
 			'child' => array(
@@ -215,12 +215,12 @@ return array(
                 ),
         
                 
-            ) // C
+            ) // Child End
 		),
         'accessories' => array(
 			'display_name' => 'Accessories',
 			'title' => 'Accessories',
-			'url'   =>'#',
+			'url'   =>'accessories',
 			'icon' => 'icon-paper menu-icon',
             'active' =>'true',
 			'child' => array(
@@ -270,7 +270,7 @@ return array(
                 ),
         
                 
-            ) // C
+            ) // Child End
 		),
         
 		

@@ -8,18 +8,16 @@
     <head lang="en">
         @include('common.head')
         @include('common.css')
-        <link rel="stylesheet" href="<?php echo $baseUrl ?>css/feather.css?v=<?php echo $version ?>">
-        <link rel="stylesheet" href="<?php echo $baseUrl ?>css/theme-style.css?v=<?php echo $version ?>">
-        <link rel="stylesheet" href="<?php echo $baseUrl ?>css/style.css?v=<?php echo $version ?>">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="<?php echo $baseUrl ?>css/app.css?v=<?php echo $version ?>">
+
         @include('common.js')
         
         @include('common.favicon')
     </head>
     <body>
-        <div class="horizontal-menu">
-            @include('layouts.header')
-            @include('layouts.menu')
-        </div>
+        @include('layouts.header')
+        @include('layouts.menu')
         <div class="container-scroller">
             <div class="container-fluid page-body-wrapper">
                 <div class="main-panel">

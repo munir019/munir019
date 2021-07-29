@@ -5,7 +5,7 @@ return array(
 			'display_name' => 'Dashboard',
 			'title' => 'Dashboard',
 			'url'   =>'',
-			'icon' => 'icon-grid menu-icon',
+			'icon' => 'fas fa-tachometer-alt',
             'active' =>'true',
 			'child' => ''
 		),
@@ -13,7 +13,7 @@ return array(
 			'display_name' => 'News Manager',
 			'title' => 'News Manager',
 			'url'   =>'news-manager',
-            'icon' => 'icon-columns menu-icon',
+            'icon' => 'far fa-newspaper',
             'active' =>'true',
 			'child' => array(
 
@@ -76,19 +76,11 @@ return array(
                 ),
             ) // Child End
 		),
-        'page_manager' => array(
-			'display_name' => 'Page Manager',
-			'title' => 'Page Manager',
-			'url'   =>'page-manager',
-            'icon' => 'icon-grid menu-icon',
-            'active' =>'true',
-			'child' => ''
-		),
         'photo_manager' => array(
 			'display_name' => 'Photo Manager',
 			'title' => 'Photo Manager',
 			'url'   =>'photo-manager',
-            'icon' => 'icon-layout menu-icon',
+            'icon' => 'fas fa-camera-retro',
 			'active' =>'true',
             'child' => array(
 
@@ -112,7 +104,7 @@ return array(
             'display_name' => 'Video Manager',
             'title' => 'Video Manager',
             'url'   =>'video-manager',
-            'icon' => 'icon-grid menu-icon',
+            'icon' => 'fas fa-video',
             'active' =>'true',
             'child' => array(
 
@@ -136,19 +128,11 @@ return array(
                 
             ) // Child End
         ),
-        'notice_manager' => array(
-			'display_name' => 'Notice Manager',
-			'title' => 'Notice Manager',
-			'url'   =>'notice-manager',
-			'icon' => 'icon-bar-graph menu-icon',
-            'active' =>'true',
-			'child' => ''
-		),
         'user_manager' => array(
 			'display_name' => 'User Manager',
 			'title' => 'User Manager',
 			'url'   =>'user-manager',
-			'icon' => 'icon-head menu-icon',
+			'icon' => 'fas fa-user-cog',
             'active' =>'true',
 			'child' => array(
 
@@ -176,7 +160,7 @@ return array(
 			'display_name' => 'Engine Setting',
 			'title' => 'Engine Setting',
 			'url'   =>'engine-setting',
-			'icon' => 'icon-cog menu-icon',
+			'icon' => 'fas fa-cogs',
             'active' =>'true',
 			'child' => array(
 
@@ -221,7 +205,7 @@ return array(
 			'display_name' => 'Accessories',
 			'title' => 'Accessories',
 			'url'   =>'accessories',
-			'icon' => 'icon-paper menu-icon',
+			'icon' => 'fas fa-sliders-h',
             'active' =>'true',
 			'child' => array(
 

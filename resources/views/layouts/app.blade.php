@@ -18,13 +18,9 @@
     <body>
         @include('layouts.header')
         @include('layouts.menu')
-        <div class="container-scroller">
-            <div class="container-fluid page-body-wrapper">
-                <div class="main-panel">
-                    @yield('content')
-                </div>
-                @include('layouts.footer')
-            </div>
+        <div class="container">
+            @yield('content')
         </div>
+        @include('layouts.footer')
     </body>
 </html>

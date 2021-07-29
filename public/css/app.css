@@ -1,12 +1,12 @@
 *{ margin: 0; padding: 0}
-
+a{ text-decoration: none}
 html,body{ font-family: 'Nunito'; font-size: 12px}
 
 body{ background: #f1f1f1}
 
-section.header{ height: 50px; background: #4B49AC}
-section.header .logo{ height: 32px}
-section.header .avatar{ height: 32px; border-radius: 50%; cursor: pointer}
+header.header{ height: 50px; background: #4B49AC}
+header.header .logo{ height: 32px}
+header.header .avatar{ height: 32px; border-radius: 50%; cursor: pointer}
 
 section.menu{ height: 40px; background: #fff}
 

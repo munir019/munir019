@@ -1,4 +1,4 @@
-<section class="header">
+<header class="header">
     <div class="container p-2">
         <div class="d-inline-block">
             <img class="logo" src="<?php echo $baseUrl ?>img/logo.png" >
@@ -15,4 +15,4 @@
         </div>
 
     </div>
-</section>
+</header>

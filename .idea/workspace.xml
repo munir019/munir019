@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59b9a6d2-b37d-49a7-94cd-ce6f7ae3fb2b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/news-category/modify.blade.php" afterPath="$PROJECT_DIR$/resources/views/news-category/modify.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -48,10 +47,10 @@
       <file leaf-file-name="modify.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/news-category/modify.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="295" column="94" lean-forward="false" selection-start-line="295" selection-start-column="94" selection-end-line="295" selection-end-column="94" />
+            <state relative-caret-position="372">
+              <caret line="62" column="144" lean-forward="false" selection-start-line="62" selection-start-column="144" selection-end-line="62" selection-end-column="144" />
               <folding>
-                <element signature="e#12413#13641#0#HTML" expanded="false" />
+                <element signature="e#12404#13632#0#HTML" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -516,12 +515,12 @@
       <workItem from="1626060267460" duration="1782000" />
       <workItem from="1626318595600" duration="546000" />
       <workItem from="1627182814547" duration="11984000" />
-      <workItem from="1627528482174" duration="14002000" />
+      <workItem from="1627528482174" duration="14619000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36040000" />
+    <option name="totallyTimeSpent" value="36657000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1030" extended-state="6" />
@@ -939,10 +938,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/news-category/modify.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="295" column="94" lean-forward="false" selection-start-line="295" selection-start-column="94" selection-end-line="295" selection-end-column="94" />
+        <state relative-caret-position="372">
+          <caret line="62" column="144" lean-forward="false" selection-start-line="62" selection-start-column="144" selection-end-line="62" selection-end-column="144" />
           <folding>
-            <element signature="e#12413#13641#0#HTML" expanded="false" />
+            <element signature="e#12404#13632#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>

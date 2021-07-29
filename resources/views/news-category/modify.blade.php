@@ -56,11 +56,11 @@
                             <label class="col-sm-3 col-form-label">Max News</label>
                             <label class="col-sm-2 col-form-label pe-0">On Front</label>
                             <div class="col-sm-2">
-                                <input type="number" class="form-control" name="hierarchy" value="<?php echo (isset($newscategory['hierarchy'])?$newscategory['hierarchy']:'5'); ?>">
+                                <input type="number" class="form-control" name="on_front" value="<?php echo (isset($newscategory['on_front'])?$newscategory['on_front']:'5'); ?>">
                             </div>
                             <label class="col-sm-3 col-form-label pe-0">On Category</label>
                             <div class="col-sm-2">
-                                <input type="number" class="form-control" name="sub_hierarchy" value="<?php echo (isset($newscategory['sub_hierarchy'])?$newscategory['sub_hierarchy']:'15'); ?>">
+                                <input type="number" class="form-control" name="on_category" value="<?php echo (isset($newscategory['on_category'])?$newscategory['on_category']:'15'); ?>">
                             </div>
                         </div>
 

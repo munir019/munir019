@@ -1,259 +1,316 @@
 @extends('layouts.app')
 @section('content')
-<div class="content-wrapper">
+    <h5 class="card-title">News Category</h5>
+    <hr>
     <form id="submit-form" action="<?php echo $baseUrl ?>newscategory/update" method="post" enctype="multipart/form-data" class="forms-sample">
         @csrf
-        <div class="entry-form">
-            <div class="grid-margin bg-white">
-                <div class="row">
-                    <div class="com-md-4 col-sm-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">News category</h4>
-                                <div class="card-block">
-                                    <div class="form-group row">
-                                        <label for="exampleInputUsername1" class="col-sm-4 col-form-label form-control-sm">Name<span class="text-danger ml-1 font-20">*</span></label>
-                                        <div class="col-sm-8">
-                                            <input type="text" value="<?php echo (isset($newscategory['name'])?$newscategory['name']:''); ?>" class="form-control form-contron-sm" id="exampleInputUsername1" name="name" required autocomplete="off" />
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="exampleInputUsername1" class="col-sm-4 col-form-label form-control-sm">Url<span class="text-danger ml-1 font-20">*</span></label>
-                                        <div class="col-sm-8">
-                                            <input type="text" value="<?php echo (isset($newscategory['url'])?$newscategory['url']:''); ?>" class="form-control form-control-sm" id="exampleInputUsername1" name="url" required autocomplete="off" />
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="exampleInputUsername1" class="col-sm-4 col-form-label form-control-sm">Color</label>
-                                        <div class="col-sm-8">
-                                            <input type="text" value="<?php echo (isset($newscategory['color'])?$newscategory['color']:''); ?>" class="form-control form-control-sm" id="exampleInputUsername1" name="color" required autocomplete="off" />
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="exampleInputUsername1" class="col-sm-4 col-form-label form-control-sm">Parent Menu</label>
-                                        <div class="col-sm-8">
-                                            <select class="form-control form-control-sm" id="exampleInputUsername1" name="parent_id" <?php echo (isset($newscategory['parent_id'])?'data-id="'.$newscategory['parent_id'].'"':''); ?> >
-                                                <option >Select</option>
-                                                <option value="1">Yes</option>
-                                                <option value="0">No </option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label form-control-sm">Hierarchy</label>
-                                        <div class="col-sm-8 relative">
-                                            <input type="text" value="<?php echo (isset($newscategory['hierarchy'])?$newscategory['hierarchy']:''); ?>" name="hierarchy" autocomplete="off" class="form-control form-control-sm" id="exampleInputUsername1" >
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label form-control-sm">Sub-hierarchy</label>
-                                        <div class="col-sm-8">
-                                            <input type="text" value="<?php echo (isset($newscategory['sub_hierarchy'])?$newscategory['sub_hierarchy']:''); ?>" name="sub_hierarchy" autocomplete="off" class="form-control form-control-sm" >
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label form-control-sm">Header Display</label>
-                                        <div class="col-sm-8">
-                                            <select class="form-control form-control-sm" name="header_display" <?php echo (isset($newscategory['header_display'])?'data-id="'.$newscategory['header_display'].'"':''); ?> >
-                                                <option>Select</option>
-                                                <option value="1">Yes</option>
-                                                <option value="0">No</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label form-control-sm">Header Hierarchy</label>
-                                        <div class="col-sm-8 relative">
-                                            <input type="text" value="<?php echo (isset($newscategory['header_hierarchy'])?$newscategory['header_hierarchy']:''); ?>" name="header_hierarchy" autocomplete="off" class="form-control form-control-sm" id="exampleInputUsername1" >
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label form-control-sm">Body Display</label>
-                                        <div class="col-sm-8">
-                                            <select class="form-control form-control-sm" name="body_display" <?php echo (isset($newscategory['body_display'])?'data-id="'.$newscategory['body_display'].'"':''); ?> >
-                                                <option>Select</option>
-                                                <option value="1">Yes</option>
-                                                <option value="0">No</option>
-                                            </select>
-                                        </div>
-                                    </div>
+        <div class="row">
+            <div class="col-md-5 col-sm-12">
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <h5 class="card-title mb-4">Basic Information</h5>
 
+                        <div class="mb-3 row">
+                            <label class="col-sm-3 col-form-label">Name</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="name" value="<?php echo (isset($newscategory['name'])?$newscategory['name']:''); ?>">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label class="col-sm-3 col-form-label">Title</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="title" value="<?php echo (isset($newscategory['title'])?$newscategory['title']:''); ?>">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label class="col-sm-3 col-form-label">Url</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="url" value="<?php echo (isset($newscategory['url'])?$newscategory['url']:''); ?>">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label class="col-sm-3 col-form-label">Parent</label>
+                            <div class="col-sm-9">
+                                <select class="form-control" name="parent_id" <?php echo (isset($newscategory['parent_id'])?'data-id="'.$newscategory['parent_id'].'"':''); ?> >
+                                    <option >Select</option>
+                                    <option value="1">1</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label class="col-sm-3 col-form-label">Hierarchy</label>
+                            <div class="col-sm-3">
+                                <input type="number" class="form-control" name="hierarchy" value="<?php echo (isset($newscategory['hierarchy'])?$newscategory['hierarchy']:'999'); ?>">
+                            </div>
+                            <label class="col-sm-3 col-form-label pe-0">Sub Hierarchy</label>
+                            <div class="col-sm-3">
+                                <input type="number" class="form-control" name="sub_hierarchy" value="<?php echo (isset($newscategory['sub_hierarchy'])?$newscategory['sub_hierarchy']:'999'); ?>">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label class="col-sm-3 col-form-label">Max News</label>
+                            <label class="col-sm-2 col-form-label pe-0">On Front</label>
+                            <div class="col-sm-2">
+                                <input type="number" class="form-control" name="hierarchy" value="<?php echo (isset($newscategory['hierarchy'])?$newscategory['hierarchy']:'5'); ?>">
+                            </div>
+                            <label class="col-sm-3 col-form-label pe-0">On Category</label>
+                            <div class="col-sm-2">
+                                <input type="number" class="form-control" name="sub_hierarchy" value="<?php echo (isset($newscategory['sub_hierarchy'])?$newscategory['sub_hierarchy']:'15'); ?>">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label class="col-sm-3 col-form-label">Edition</label>
+                            <div class="col-sm-9 pt-2">
+                                <div class="form-check-inline me-4">
+                                    <input class="form-check-input me-1" type="checkbox" name="online_edition" value="" id="onlineEdition" required>
+                                    <label class="form-check-label" for="onlineEdition">
+                                        Online
+                                    </label>
                                 </div>
-                            </div>    
+                                <div class="form-check-inline">
+                                    <input class="form-check-input me-1" type="checkbox" name="print_edition" value="" id="printEdition" required>
+                                    <label class="form-check-label" for="printEdition">
+                                        Print
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label class="col-sm-3 col-form-label">Publish</label>
+                            <div class="col-sm-9 pt-2">
+                                <div class="form-check-inline me-4">
+                                    <input class="form-check-input me-1" type="checkbox" name="statusActive" value="" id="status" required>
+                                    <label class="form-check-label" for="statusActive">
+                                        Yes
+                                    </label>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="com-md-4 col-sm-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title"></h4>
-                                <div class="card-block">
-                                   <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label form-control-sm">Body Hierarchy</label>
-                                        <div class="col-sm-8 relative">
-                                            <input type="text" value="<?php echo (isset($newscategory['body_hierarchy'])?$newscategory['body_hierarchy']:''); ?>" name="body_hierarchy" autocomplete="off" class="form-control form-control-sm" id="exampleInputUsername1" >
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label form-control-sm">Footer Display</label>
-                                        <div class="col-sm-8">
-                                            <select class="form-control form-control-sm" name="footer_display" <?php echo (isset($newscategory['footer_display'])?'data-id="'.$newscategory['footer_display'].'"':''); ?> >
-                                                <option>Select</option>
-                                                <option value="1">Yes</option>
-                                                <option value="0">No</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label form-control-sm">Footer Hierarchy</label>
-                                        <div class="col-sm-8 relative">
-                                            <input type="text" value="<?php echo (isset($newscategory['footer_hierarchy'])?$newscategory['footer_hierarchy']:''); ?>" name="footer_hierarchy" autocomplete="off" class="form-control form-control-sm" id="exampleInputUsername1" >
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label form-control-sm">Right Display</label>
-                                        <div class="col-sm-8">
-                                            <select class="form-control form-control-sm" name="right_display" <?php echo (isset($newscategory['right_display'])?'data-id="'.$newscategory['right_display'].'"':''); ?> >
-                                                <option>Select</option>
-                                                <option value="1">Yes</option>
-                                                <option value="0">No</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label form-control-sm">Right Hierarchy</label>
-                                        <div class="col-sm-8 relative">
-                                            <input type="text" value="<?php echo (isset($newscategory['right_hierarchy'])?$newscategory['right_hierarchy']:''); ?>" name="right_hierarchy" autocomplete="off" class="form-control form-control-sm" id="exampleInputUsername1" >
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label form-control-sm">Mobile Header</label>
-                                        <div class="col-sm-8">
-                                            <select class="form-control form-control-sm" name="mobile_header_display" <?php echo (isset($newscategory['mobile_header_display'])?'data-id="'.$newscategory['mobile_header_display'].'"':''); ?> >
-                                                <option>Select</option>
-                                                <option value="1">Yes</option>
-                                                <option value="0">No</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label form-control-sm">Mobile Header Hierarchy</label>
-                                        <div class="col-sm-8 relative">
-                                            <input type="text" value="<?php echo (isset($newscategory['mobile_header_hierarchy'])?$newscategory['mobile_header_hierarchy']:''); ?>" name="mobile_header_hierarchy" autocomplete="off" class="form-control form-control-sm" id="exampleInputUsername1" >
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label form-control-sm">Mobile Body Display</label>
-                                        <div class="col-sm-8">
-                                            <select class="form-control form-control-sm" name="mobile_body_display" <?php echo (isset($newscategory['mobile_body_display'])?'data-id="'.$newscategory['mobile_body_display'].'"':''); ?> >
-                                                <option>Select</option>
-                                                <option value="1">Yes</option>
-                                                <option value="0">No</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label form-control-sm">Mobile Body Hierarchy</label>
-                                        <div class="col-sm-8 relative">
-                                            <input type="text" value="<?php echo (isset($newscategory['mobile_body_hierarchy'])?$newscategory['mobile_body_hierarchy']:''); ?>" name="mobile_body_hierarchy" autocomplete="off" class="form-control form-control-sm" id="exampleInputUsername1" >
-                                        </div>
-                                    </div>
-                                    
-                                       
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-12">
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <h5 class="card-title mb-4">On Web</h5>
+
+                        <div class="mb-3 row">
+                            <label class="col-sm-3 col-3 col-form-label">Header</label>
+                            <div class="col-sm-3 col-3 pt-2">
+                                <div class="form-check-inline me-0">
+                                    <input class="form-check-input me-1" type="checkbox" name="header_display" value="" id="onHeader" required>
+                                    <label class="form-check-label" for="onHeader">
+                                        Yes
+                                    </label>
                                 </div>
-                            </div>    
+                            </div>
+                            <div class="col-sm-3 col-3">
+                                <label class="col-form-label">
+                                    Hierarchy
+                                </label>
+                            </div>
+                            <div class="col-sm-3 col-3">
+                                <input type="text" value="<?php echo (isset($newscategory['header_hierarchy'])?$newscategory['header_hierarchy']:'999'); ?>" name="header_hierarchy" class="form-control">
+                            </div>
                         </div>
-                    </div> 
-                    <div class="com-md-4 col-sm-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title"></h4>
-                                <div class="card-block">
-                                   
-                                    
-                                    
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label form-control-sm">Special Display</label>
-                                        <div class="col-sm-8">
-                                            <select class="form-control form-control-sm" name="special_display" <?php echo (isset($newscategory['special_display'])?'data-id="'.$newscategory['special_display'].'"':''); ?> >
-                                                <option>Select</option>
-                                                <option value="1">Yes</option>
-                                                <option value="0">No</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label form-control-sm">Special Hierarchy</label>
-                                        <div class="col-sm-8 relative">
-                                            <input type="text" value="<?php echo (isset($newscategory['special_hierarchy'])?$newscategory['special_hierarchy']:''); ?>" name="special_hierarchy" autocomplete="off" class="form-control form-control-sm" id="exampleInputUsername1" >
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label form-control-sm">Online Edition</label>
-                                        <div class="col-sm-8">
-                                            <select class="form-control form-control-sm" name="online_edition" <?php echo (isset($newscategory['online_edition'])?'data-id="'.$newscategory['online_edition'].'"':''); ?> >
-                                                <option>Select</option>
-                                                <option value="1">Yes</option>
-                                                <option value="0">No</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label form-control-sm">Print Edition</label>
-                                        <div class="col-sm-8">
-                                            <select class="form-control form-control-sm" name="print_edition" <?php echo (isset($newscategory['print_edition'])?'data-id="'.$newscategory['print_edition'].'"':''); ?> >
-                                                <option>Select</option>
-                                                <option value="1">Yes</option>
-                                                <option value="0">No</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label form-control-sm">Meta Key</label>
-                                        <div class="col-sm-8 relative">
-                                            <input type="text" value="<?php echo (isset($newscategory['meta_key'])?$newscategory['meta_key']:''); ?>" name="meta_key" autocomplete="off" class="form-control form-control-sm" id="exampleInputUsername1" >
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label form-control-sm">Meta description</label>
-                                        <div class="col-sm-8 relative">
-                                            <input type="text" value="<?php echo (isset($newscategory['meta_description'])?$newscategory['meta_description']:''); ?>" name="meta_description" autocomplete="off" class="form-control form-control-sm" id="exampleInputUsername1" >
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label form-control-sm">Social Images</label>
-                                        <div class="col-sm-8 relative">
-                                            <input type="file"  name="social_image" autocomplete="off" class="form-control form-control-sm" id="exampleInputUsername1" >
-                                            
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label form-control-sm">Category image</label>
-                                        <div class="col-sm-8 relative">
-                                            <input type="file"  name="cat_image" autocomplete="off" class="form-control form-control-sm" id="exampleInputUsername1" >
-                                            
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-sm-4 col-form-label form-control-sm">Publish</label>
-                                        <div class="col-sm-8">
-                                            <select class="form-control form-control-sm" name="status" <?php echo (isset($newscategory['status'])?'data-id="'.$newscategory['status'].'"':''); ?> >
-                                                <option>Select</option>
-                                                <option value="1">Yes</option>
-                                                <option value="0">No</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <button type="submit" class="btn btn-success float-right">Save</button>
-                                 </div>
-                            </div>    
+
+                        <div class="mb-3 row">
+                            <label class="col-sm-3 col-3 col-form-label">Body</label>
+                            <div class="col-sm-3 col-3 pt-2">
+                                <div class="form-check-inline me-0">
+                                    <input class="form-check-input me-1" type="checkbox" name="body_display" value="" id="onBody" required>
+                                    <label class="form-check-label" for="onBody">
+                                        Yes
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-3">
+                                <label class="col-form-label">
+                                    Hierarchy
+                                </label>
+                            </div>
+                            <div class="col-sm-3 col-3">
+                                <input type="text" value="<?php echo (isset($newscategory['body_hierarchy'])?$newscategory['body_hierarchy']:'999'); ?>" name="body_hierarchy" class="form-control">
+                            </div>
                         </div>
-                    </div> 
-                </div>    
+
+                        <div class="mb-3 row">
+                            <label class="col-sm-3 col-3 col-form-label">Footer</label>
+                            <div class="col-sm-3 col-3 pt-2">
+                                <div class="form-check-inline me-0">
+                                    <input class="form-check-input me-1" type="checkbox" name="footer_display" value="" id="onFooter" required>
+                                    <label class="form-check-label" for="onFooter">
+                                        Yes
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-3">
+                                <label class="col-form-label">
+                                    Hierarchy
+                                </label>
+                            </div>
+                            <div class="col-sm-3 col-3">
+                                <input type="text" value="<?php echo (isset($newscategory['footer_hierarchy'])?$newscategory['footer_hierarchy']:'999'); ?>" name="footer_hierarchy" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label class="col-sm-3 col-3 col-form-label">Right</label>
+                            <div class="col-sm-3 col-3 pt-2">
+                                <div class="form-check-inline me-0">
+                                    <input class="form-check-input me-1" type="checkbox" name="right_display" value="" id="onRight" required>
+                                    <label class="form-check-label" for="onRight">
+                                        Yes
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-3">
+                                <label class="col-form-label">
+                                    Hierarchy
+                                </label>
+                            </div>
+                            <div class="col-sm-3 col-3">
+                                <input type="text" value="<?php echo (isset($newscategory['right_hierarchy'])?$newscategory['right_hierarchy']:'999'); ?>" name="right_hierarchy" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label class="col-sm-3 col-3 col-form-label">Special</label>
+                            <div class="col-sm-3 col-3 pt-2">
+                                <div class="form-check-inline me-0">
+                                    <input class="form-check-input me-1" type="checkbox" name="special_display" value="" id="onSpecial" required>
+                                    <label class="form-check-label" for="onSpecial">
+                                        Yes
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-3">
+                                <label class="col-form-label">
+                                    Hierarchy
+                                </label>
+                            </div>
+                            <div class="col-sm-3 col-3">
+                                <input type="text" value="<?php echo (isset($newscategory['special_hierarchy'])?$newscategory['special_hierarchy']:'999'); ?>" name="special_hierarchy" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <h5 class="card-title mb-4">On Mobile</h5>
+
+                        <div class="mb-3 row">
+                            <label class="col-sm-3 col-3 col-form-label">Header</label>
+                            <div class="col-sm-3 col-3 pt-2">
+                                <div class="form-check-inline me-0">
+                                    <input class="form-check-input me-1" type="checkbox" name="mobile_header_display" value="" id="onHeader" required>
+                                    <label class="form-check-label" for="onHeader">
+                                        Yes
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-3">
+                                <label class="col-form-label">
+                                    Hierarchy
+                                </label>
+                            </div>
+                            <div class="col-sm-3 col-3">
+                                <input type="text" value="<?php echo (isset($newscategory['mobile_header_hierarchy'])?$newscategory['mobile_header_hierarchy']:'999'); ?>" name="mobile_header_hierarchy" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label class="col-sm-3 col-3 col-form-label">Body</label>
+                            <div class="col-sm-3 col-3 pt-2">
+                                <div class="form-check-inline me-0">
+                                    <input class="form-check-input me-1" type="checkbox" name="mobile_body_display" value="" id="onBody" required>
+                                    <label class="form-check-label" for="onBody">
+                                        Yes
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 col-3">
+                                <label class="col-form-label">
+                                    Hierarchy
+                                </label>
+                            </div>
+                            <div class="col-sm-3 col-3">
+                                <input type="text" value="<?php echo (isset($newscategory['mobile_body_hierarchy'])?$newscategory['mobile_body_hierarchy']:'999'); ?>" name="mobile_body_hierarchy" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-12">
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <h5 class="card-title mb-4">Advance</h5>
+
+                        <div class="mb-3 row">
+                            <label class="col-sm-3 col-form-label">Color</label>
+                            <div class="col-sm-9">
+                                <input type="color" class="form-control" name="color" value="<?php echo (isset($newscategory['color'])?$newscategory['color']:''); ?>">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label class="col-sm-3 col-form-label">Icon</label>
+                            <div class="col-sm-9">
+                                <input type="file"  name="cat_image" class="form-control" >
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label class="col-sm-3 col-form-label">Banner</label>
+                            <div class="col-sm-9">
+                                <input type="file"  name="cat_banner_image" class="form-control" >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-2">
+                    <div class="card-body">
+                        <h5 class="card-title mb-4">SEO</h5>
+
+                        <div class="mb-3 row">
+                            <label class="col-sm-3 col-form-label">Meta Key</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="meta_key" value="<?php echo (isset($newscategory['meta_key'])?$newscategory['meta_key']:''); ?>">
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label class="col-sm-3 col-form-label">Meta Description</label>
+                            <div class="col-sm-9">
+                                <textarea class="form-control" name="meta_description" rows="3"><?php echo (isset($newscategory['meta_description'])?$newscategory['meta_description']:''); ?></textarea>
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label class="col-sm-3 col-form-label">Social Image</label>
+                            <div class="col-sm-9">
+                                <input type="file"  name="social_image" class="form-control" >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+
             </div>
         </div>
 
     </form>
-</div>
 
 @endsection

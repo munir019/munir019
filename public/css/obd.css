@@ -1,0 +1,67 @@
+
+@font-face {
+    font-family: "SolaimanLipi";
+    src: url("../font/SolaimanLipi.ttf?v=1") format("opentype");
+}
+.control-panel .page-content{ padding-right: 10px; background:#fff}
+.form-control-sm{padding: .25rem 1rem !important;}
+.multiselect{height:50px!important}
+a{ text-decoration: none !important}
+.vs{color: #008000}
+
+.w-140{width: 140px!important}
+html,body,input,textarea,select{ font-family: SolaimanLipi !important;}
+.bn-font{ font-family: SolaimanLipi !important; _font-size: 16px; font-weight: normal !important;}
+.site-header .user-menu.dropdown .dropdown-toggle:after{ border-top: 7px solid; border-right: 5px solid transparent; border-left: 5px solid transparent}
+.dropdown-toggle:after{ top:10px}
+.site-header .user-menu.dropdown .dropdown-toggle{ line-height: 17px}
+
+.user-info span{ margin: 0px; padding: 1px; line-height: 20px; font-size: 14px}
+.user-info span:nth-child(1){ font-weight: bold}
+
+.widget-icon{ position: relative; cursor: pointer}
+.widget-icon:hover .widget-apps{ display: block}
+.widget-icon .widget-apps{ position: absolute; right: 0px; background: #FFF; border: 1px solid #ccc; border-radius: 3px; padding: 3px; display: none}
+.widget-icon .widget-apps ul{ width: 200px}
+.widget-icon .widget-apps ul li{ width: 48%; display: inline-block; text-align: center; padding: 10px}
+.widget-icon .widget-apps ul li img{ width: 40px}
+.widget-icon .widget-apps ul li span{ display: block}
+
+.side-menu-list .lbl{ font-weight: normal}
+
+.font-12{ font-size: 12px}
+.font-13{ font-size: 13px}
+.font-14{ font-size: 14px}
+.font-16{ font-size: 16px}
+.font-18{ font-size: 18px}
+.font-20{ font-size: 20px}
+.font-22{ font-size: 22px}
+.font-24{ font-size: 24px}
+
+
+.pagination{float:right!important;}
+.dataTables_info{padding-top:20px}
+
+.dataTables_filter{float: right; _margin-top:20px;display: none}
+.dataTables_filter label{margin:0 0 20px 0; display: inline-flex; line-height: 30px;}
+.dataTables_filter input{width:200px; margin-left:10px}
+
+.dataTables_length select{_margin:20px 0; width: 86px}
+.dataTables_length label{margin-bottom: 10px}
+
+.dataTables_length input{width:200px}
+
+.form-group{margin-bottom: 0.5rem;}
+.card { margin-bottom: 10px!important;}
+.date{position:relative}
+img.ui-datepicker-trigger{position: absolute; top: 5px!important; right: 16px!important;cursor: pointer; width:20px}
+.modal-footer{padding: .5rem 1rem; margin-left: 145px}
+.side-menu .jspPane{ _padding-top: 60px!important}
+.page-content {padding: 70px 15px 10px;}
+
+.box-typical.box-typical-dashboard{margin:0 0 0;}
+.card-block{padding:10px}
+.fa-pencil{color:#fff}
+.sub-right{right:40px; top:50px}
+.site-header .site-logo img { top: 0px!important; margin-right: 10px; height:57px!important}
+.site-header .site-header-content{ margin-left: -270px;}

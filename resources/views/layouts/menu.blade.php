@@ -1,36 +1,63 @@
-<?php
-$navList=config('newspaper.module.module');
-?>
-<section class="menu">
-    <div class="container p-2">
-        <nav>
-            <ul class="nav">
-                <?php $co=0;
-                foreach($navList as $key=> $val){if($val['active']=='true'){
-                    echo '<li class="nav-item">';
-                    echo '<a href="'.$baseUrl.$val['url'].'" class="nav-link d-inline-block py-2">';
-                    echo '<i class="'.$val['icon'].'"></i>';
-                    echo '<span class="menu-title">'.trans('news.'.$key).'</span>';
-                    echo'</a>';
-                    if(!empty($val['child'])){
-                        $child_list = $val['child'];
-                        echo '<i class="menu-arrow"></i>';
-                        echo '<div class="submenu">';
-                        echo '<ul class="submenu-item">';
-                        foreach($child_list as $nav => $data){ if($data['active']=='true'){
-                            $url= str_replace('-','',$data['url']);
-                            echo '<li class="nav-item">';
-                            echo '<a class="nav-link" href="'.$baseUrl.$url.'"><i class="fas fa-chevron-right"></i><span>'.trans('news.'.$nav).'</span></a>';
-                            echo  '</li>';
-                        }
-                        }
-                        echo'</ul>';
-                        echo  '</div>';
-                    }
-                    echo '</li>';
-                    $co++;
-                }}?>
-            </ul>
-        </nav>
-    </div>
-</section>
+<div class="mobile-menu-left-overlay"></div>
+<nav class="side-menu">
+    <ul class="side-menu-list">
+        <li class="blue with-sub">
+            <a href="<?php echo $baseUrl ?>case">
+                <span>
+                    <i class="font-icon font-icon-doc"></i>
+                    <span class="lbl text-small">Cases<div class="text-small text-muted font-weight-normal ">মামলা</div></span>
+                </span>
+            </a>
+        </li>
+        <li class="green with-sub">
+            <a href="<?php echo $baseUrl ?>causelist">
+                <span>
+                    <i class="font-icon font-icon-doc"></i>
+                    <span class="lbl text-small"> Cause List <div class="text-small text-muted font-weight-normal">কার্যতালিকা</div></span>
+                </span>
+            </a>
+        </li>
+        
+        <li class="green with-sub">
+            <a href="<?php echo $baseUrl ?>case/caseinformation">
+                <span>
+                    <i class="font-icon font-icon-doc"></i>
+                    <span class="lbl text-small"> Case Information <div class="text-small text-muted font-weight-normal">মামলার তথ্য </div></span>
+                </span>
+            </a>
+        </li>
+        <li class="green with-sub">
+            <a href="<?php echo $baseUrl ?>case/caseinformation">
+                <span>
+                    <i class="font-icon font-icon-doc"></i>
+                    <span class="lbl text-small">Orders<div class="text-small text-muted font-weight-normal">মামলার তথ্য </div></span>
+                </span>
+            </a>
+        </li>
+        <!-- <li class="purple with-sub">
+            <a href="<?php //echo $baseUrl ?>jurisdiction">
+                <span>
+                    <i class="font-icon font-icon-doc"></i>
+                    <span class="lbl text-small"> Jurisdiction <div class="text-small text-muted font-weight-normal">অধিক্ষেত্র</div></span>
+                </span>
+            </a>
+        </li>
+        <li class="red with-sub">
+            <a href="<?php //echo $baseUrl ?>bench">
+                <span>
+                    <i class="font-icon font-icon-doc"></i>
+                    <span class="lbl text-small">Bench Formation <div class="text-small text-muted font-weight-normal">বেঞ্চ গঠন</div></span>
+                </span>
+            </a>
+        </li>
+        <li class="green with-sub">
+            <a href="<?php //echo $baseUrl ?>supreme">
+                <span>
+                    <i class="font-icon font-icon-doc"></i>
+                    <span class="lbl text-small">Cause List(Appellate Division) <div class="text-small text-muted font-weight-normal">কার্যতালিকা</div></span>
+                </span>
+            </a>
+        </li> -->
+
+    </ul>
+</nav>

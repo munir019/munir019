@@ -17,9 +17,6 @@ class SessionUser
      */
     public function handle($request, Closure $next)
     {
-        if(!$this->validNetwork())
-            return redirect(config('newspaper.url.error.unauthorized-network'));
-
         if(session()->has("user")) {
             return $next($request);
         }

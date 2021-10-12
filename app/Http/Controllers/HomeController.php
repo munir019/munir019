@@ -2,18 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use DB;
+use App\Models\CaseDetails;
 use Illuminate\Http\Request;
 use App\Http\Requests;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Storage;
 
 class HomeController extends Controller
 {
     public function index(Request $request)
     {
-        $title = 'Dashboard';
-
-        //dd(session()->get('user'));
-
-        return view('home.index', compact(['title']));
+        $title = 'মামলার কার্যতালিকা';
+        
+        return view('home', compact(['title']));
     }
 }

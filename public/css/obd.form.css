@@ -1,0 +1,13 @@
+.form-view{ font-family: SolaimanLipi; font-size: 18px; padding: 1rem; }
+
+.form-view .required{ color: red !important; margin: 0px 3px; display: inline-block}
+
+.form-view .inline{ display: inline-block}
+.form-view .auto-width{ width: auto}
+
+.form-view #division_id, .form-view #district_id, .form-view #upazilla_id{ margin-right: 5px}
+
+.form-view .fb-lable, .form-view .ln-bn{ font-size: 18px;}
+
+.form-view .form-group{ margin-bottom: 0.5rem !important;}
+

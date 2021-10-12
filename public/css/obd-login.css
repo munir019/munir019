@@ -1,0 +1,22 @@
+.control-panel .page-content{ padding-right: 10px}
+
+@font-face {
+    font-family: 'kalpurushregular';
+    src: url('../font/kalpurush.eot');
+    src: url('../font/kalpurush.woff') format('woff'), url('../font/kalpurush.ttf') format('truetype'), url('../font/kalpurush.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+a{ text-decoration: none !important}
+.italic{ font-style: italic;}
+
+.en-font{ font-family: Verdana; font-size: 12px}
+.bn-font{ font-family: kalpurushregular !important; font-size: 16px; font-weight: normal !important;}
+html,body { font-family: kalpurushregular !important;}
+body{ background-size: auto !important;}
+
+.login, .sign-box{ max-width: 400px; width: 100%}
+.sign-box{ padding: 20px; text-align: left}
+.a2i-logo{ margin: auto; width: 80px}
+.logo-set{ margin: auto; width: 310px}

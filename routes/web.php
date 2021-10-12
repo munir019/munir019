@@ -51,5 +51,12 @@ Route::get($projectUrl.'/error', $namespace.'ErrorController@index');
 Route::get($projectUrl.'/login', $namespace.'AuthController@login')->name('login');
 Route::post($projectUrl.'/auth', $namespace.'AuthController@auth');
 Route::get($projectUrl.'/logout', $namespace.'AuthController@logout');
+Route::get($projectUrl.'/ssologin', $namespace.'AuthController@ssologin');
+Route::get($projectUrl.'/ssoauth', $namespace.'AuthController@ssoauth');
+Route::get($projectUrl.'/ssologout', $namespace.'AuthController@ssologout');
 
-Route::any('{all}', $namespace.$controller)->where('all', '.*')->middleware('session.user');
+Route::any('{all}', $namespace.$controller)->where('all', '.*')->middleware('session.user'); 
+
+
+
+

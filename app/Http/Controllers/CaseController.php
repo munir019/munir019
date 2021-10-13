@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Session;
 use App\Orangebd\Access;
 use App\Orangebd\Api;
 
+
 class CaseController extends Controller
 {
     public function index(Request $request)
